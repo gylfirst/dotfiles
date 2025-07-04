@@ -22,3 +22,5 @@ chmod +x ./install.sh
 
 This should be done!
 Enjoy your Arch Linux experience :blush:
+
+> Some scripts are not from me, you have the author's link in the file.
