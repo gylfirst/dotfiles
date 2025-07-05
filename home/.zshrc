@@ -133,3 +133,5 @@ esac
 # pnpm end
 
 alias vpn="sudo openvpn --config ~/Downloads/SIA.ovpn"
+
+fastfetch

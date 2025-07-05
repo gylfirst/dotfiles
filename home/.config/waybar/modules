@@ -366,6 +366,7 @@
 },
 
 "network#ipaddr": {
+    "family": "ipv4",
     "interval": 1,
     "format": "IP: {ipaddr}"
 },
@@ -714,5 +715,25 @@
 	"on-click": "wlogout -b 5",
     "interval" : 86400, // once every day
     "tooltip": true,
+},
+
+"privacy": {
+    "icon-spacing": 4,
+    "icon-size": 18,
+    "transition-duration": 250,
+    "modules": [
+    {
+        "type": "screenshare",
+        "tooltip": true
+    },
+    {
+        "type": "audio-out",
+        "tooltip": true
+    },
+    {
+        "type": "audio-in",
+        "tooltip": true
+    }
+    ]
 },
 }
