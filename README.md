@@ -23,4 +23,6 @@ chmod +x ./install.sh
 This should be done!
 Enjoy your Arch Linux experience :blush:
 
+Some scripts or configs have my path, especially those that use symbolic links. Be careful with this setup!
+
 > Some scripts are not from me, you have the author's link in the file.

@@ -32,7 +32,7 @@ function install_requirements() {
 }
 
 # List of the software that is required for the dotfiles to work
-software_list=("wget tar fastfetch hyprland hyprlock hypridle hyprpaper hyprshot kitty waybar wlogout wofi brave python-pywal rofi swaync python")
+software_list=("wget tar fastfetch hyprland hyprlock hypridle hyprpaper hyprshot kitty waybar wlogout wofi brave python-pywal rofi swaync python cliphist")
 
 # Function that installs the softwares (Arch only)
 function install_software() {
