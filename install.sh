@@ -25,12 +25,6 @@ function draw_line() {
     echo -e "\n-----------------------------------------------------------\n"
 }
 
-# Install all the requirements
-function install_requirements() {
-    install_software
-    install_fonts
-}
-
 # List of the software that is required for the dotfiles to work
 software_list=("wget tar fastfetch hyprland hyprlock hypridle hyprpaper hyprshot kitty waybar wlogout wofi brave python-pywal rofi swaync python cliphist")
 
@@ -54,6 +48,12 @@ font_list=("ttf-jetbrains-mono-nerd")
 # Function that installs the fonts that I use on my system
 function install_fonts() {
     sudo pacman -Sy --noconfirm "${font_list[@]}"
+}
+
+# Install all the requirements
+function install_requirements() {
+    install_software
+    install_fonts
 }
 
 # Copy the dotfiles into the .config directory
