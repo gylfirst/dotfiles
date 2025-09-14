@@ -36,13 +36,13 @@ software_list=("wget tar fastfetch hyprland hyprlock hypridle hyprpaper hyprshot
 
 # Function that installs the softwares (Arch only)
 function install_software() {
-    sudo pacman -Sy --noconfirm $software_list
+    sudo pacman -Sy --noconfirm "${software_list[@]}"
     # needed for dynamic change of wallpaper
     read -p "Which helper do you have installed? [paru/yay]: " arch_helper
     if [ "$arch_helper" == "paru" ]; then
-        paru -Sy --noconfirm pyprpaper
-    else if [ "$arch_helper"  == "yay" ]; then
-        yay -Sy --noconfirm pyprpaper
+        paru -Sy --noconfirm hyprpaper
+    elif [ "$arch_helper"  == "yay" ]; then
+        yay -Sy --noconfirm hyprpaper
     else
         echo "Helper unsupported, open an issue on the Git repo."
     fi
@@ -53,7 +53,7 @@ font_list=("ttf-jetbrains-mono-nerd")
 
 # Function that installs the fonts that I use on my system
 function install_fonts() {
-    sudo pacman -Sy --noconfirm $font_list
+    sudo pacman -Sy --noconfirm "${font_list[@]}"
 }
 
 # Copy the dotfiles into the .config directory
