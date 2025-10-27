@@ -6,8 +6,8 @@ connection_state=$(nmcli -f GENERAL.STATE -t connection show pi 2>/dev/null)
 # Check if the connection is active
 if [[ "$connection_state" == "GENERAL.STATE:activated" ]]; then
     nmcli connection down pi
-    notify-send "VPN Disconnected" "The Raspberry Pi VPN connection has been disconnected."
+    notify-send -u low -e -a VPN -t 2000 "VPN Disconnected" "The Raspberry Pi VPN connection has been disconnected."
 else
     nmcli connection up pi
-    notify-send "VPN Connected" "The Raspberry Pi VPN connection has been established."
+    notify-send -u low -e -a VPN -t 2000 "VPN Connected" "The Raspberry Pi VPN connection has been established."
 fi
